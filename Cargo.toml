@@ -1,0 +1,28 @@
+[package]
+name = "StreamingRespirator-rust"
+version = "0.1.0"
+authors = ["RyuaNerin <admin@ryuar.in>"]
+edition = "2018"
+description = "StreamingRespirator reproduces Twitter streaming that deprecated since 2019."
+repository = "https://github.com/RyuaNerin/StreamingRespirator-rust"
+license = "GNU General Public License v3.0"
+license-file = "LICENSE"
+readme = "README.md"
+
+[lib]
+name = "streaming_respirator"
+path = "src/lib.rs"
+crate-type = ["cdylib"]
+
+[[bin]]
+name = "streaming_respirator"
+path = "src/bin.rs"
+
+[dependencies]
+serde = { version = "1.0", features = ["derive"] }
+serde_derive = "1.0"
+serde_json = "1.0"
+chrono = "0.4.19"
+reqwest = { version = "0.11.3", features = ["json"] }
+regex = "1"
+lazy_static = "1.4.0"
